@@ -1,0 +1,60 @@
+أنت مطوّر واجهات أمامية متخصص. لديك ملفان:
+- index.html  
+- styles.css  
+
+لا تعيد كتابة الصفحة من الصفر. طبّق التعديلات التالية فقط:
+
+━━━━━━━━━━━━━━━━━━━━━━━
+## 1. حذف قسم الشهادة الوهمية
+━━━━━━━━━━━━━━━━━━━━━━━
+في index.html، احذف هذا القسم بالكامل:
+
+  <!-- ===== شهادة ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="testimonial-card-wide fade-up">
+        ...
+      </div>
+    </div>
+  </section>
+
+وفي styles.css، احذف هذه الكلاسات:
+.testimonial-card-wide
+.stars
+.testimonial-author
+.avatar
+
+━━━━━━━━━━━━━━━━━━━━━━━
+## 2. الهوية البصرية — تنظيف الألوان
+━━━━━━━━━━━━━━━━━━━━━━━
+في styles.css:
+- احذف متغيرات: --cyan, --cyan-dark, --cyan-light, --purple, --purple-light
+- استبدل كل استخدام للـ cyan في الـ CSS بـ var(--gold)
+- استبدل كل استخدام للـ purple بـ var(--navy-light)
+- في الـ Hero SVG (neural-network)، غيّر ألوان rgba(0,212,255,...) 
+  إلى rgba(212,168,67,...) بنفس قيمة الشفافية
+- في جسيمات JS داخل index.html، غيّر السطر:
+  background:${isCyan ? 'rgba(0,212,255,0.5)' : 'rgba(108,99,255,0.4)'}
+  إلى:
+  background:${isCyan ? 'rgba(212,168,67,0.4)' : 'rgba(10,22,40,0.3)'}
+  وكذلك box-shadow بنفس المنطق
+
+━━━━━━━━━━━━━━━━━━━━━━━
+## 3. الأزرار — إزالة الاستدارة المفرطة
+━━━━━━━━━━━━━━━━━━━━━━━
+في styles.css:
+- كل border-radius:999px على الأزرار (.btn, .btn-nav, .btn-primary, 
+  .btn-whatsapp, .btn-gold, .btn-gold-dark, .btn-navy, .btn-outline-gold, 
+  .btn-outline-navy, .btn-coming-soon)
+  غيّرها إلى border-radius:8px
+- .badge و .cover-tag و .sample-tab تبقى كما هي 
+  (999px مقبول للـ badges والـ tabs فقط)
+
+━━━━━━━━━━━━━━━━━━━━━━━
+## تعليمات عامة
+━━━━━━━━━━━━━━━━━━━━━━━
+- لا تغيّر أي محتوى نصي
+- لا تحذف أي قسم آخر غير المذكور
+- لا تعدّل بنية HTML خارج ما ذُكر
+- تأكد أن الـ RTL محفوظ في كل تعديل
+- الخرج: ملفي index.html و styles.css كاملَين بعد التعديل
