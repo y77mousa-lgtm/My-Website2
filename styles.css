@@ -84,7 +84,7 @@ body{direction:rtl;overflow-x:hidden}
 .nav-inner{display:flex;justify-content:space-between;align-items:center}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none}
 .logo-img{
-  width:52px;height:52px;border-radius:12px;
+  width:72px;height:72px;border-radius:16px;
   object-fit:contain;
   transition:transform var(--transition),filter var(--transition);
   filter:drop-shadow(0 0 10px rgba(212,168,67,0.35)) drop-shadow(0 0 30px rgba(212,168,67,0.12));
@@ -528,16 +528,16 @@ body{direction:rtl;overflow-x:hidden}
 }
 .logo-glow-wrapper::before{
   content:"";position:absolute;
-  width:220px;height:220px;border-radius:50%;
+  width:320px;height:320px;border-radius:50%;
   background:radial-gradient(circle,rgba(212,168,67,0.2),rgba(212,168,67,0.08),transparent 70%);
   animation:glow 4s ease-in-out infinite;
 }
 .logo-glow{
-  width:160px;height:160px;
+  width:240px;height:240px;
   object-fit:contain;
   animation:logoFloat 6s ease-in-out infinite;
   filter:drop-shadow(0 0 30px rgba(212,168,67,0.35)) drop-shadow(0 0 60px rgba(212,168,67,0.15)) drop-shadow(0 0 100px rgba(0,212,255,0.1));
-  border-radius:20px;
+  border-radius:28px;
   position:relative;z-index:1;
 }
 
@@ -549,7 +549,7 @@ body{direction:rtl;overflow-x:hidden}
 .footer-brand{display:flex;align-items:center;gap:10px;font-weight:900;color:var(--navy);font-size:1.05rem}
 .footer-brand span{filter:drop-shadow(0 0 6px rgba(212,168,67,0.1))}
 .footer-logo-img{
-  width:44px;height:44px;border-radius:10px;
+  width:60px;height:60px;border-radius:14px;
   object-fit:contain;
   filter:drop-shadow(0 0 6px rgba(212,168,67,0.3));
   transition:filter var(--transition)
@@ -563,8 +563,8 @@ body{direction:rtl;overflow-x:hidden}
   .contact-illustration{order:-1}
   .mock-phone{width:260px}
   .hero{min-height:auto;padding:120px 0 60px}
-  .logo-glow{width:130px;height:130px}
-  .logo-glow-wrapper::before{width:170px;height:170px}
+  .logo-glow{width:180px;height:180px}
+  .logo-glow-wrapper::before{width:240px;height:240px}
   .neural-network{opacity:.4}
 }
 
@@ -595,7 +595,7 @@ body{direction:rtl;overflow-x:hidden}
   .footer-inner{justify-content:center;text-align:center}
   .payment-card{flex-wrap:wrap;gap:8px}
   .copy-btn{margin-right:0}
-  .logo-img{width:44px;height:44px}
+  .logo-img{width:56px;height:56px}
   .logo-text{font-size:1.1rem}
   .neural-network{opacity:.3}
   .arabic-pattern{opacity:.025}

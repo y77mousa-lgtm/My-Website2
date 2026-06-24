@@ -6,3 +6,15 @@ obj/
 *.suo
 
 packages/
+
+# Python virtual environment (local only, not for publishing)
+.venv/
+
+# Local backups (not part of the website)
+backups/
+
+# OS / editor junk
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.log
