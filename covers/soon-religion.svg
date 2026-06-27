@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A1628"/>
+      <stop offset="100%" stop-color="#0f2a1a"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#15803d"/>
+    </linearGradient>
+  </defs>
+  <!-- خلفية -->
+  <rect width="300" height="400" fill="url(#bgGrad2)" rx="12"/>
+  <!-- إطار خارجي -->
+  <rect x="10" y="10" width="280" height="380" fill="none" stroke="url(#greenGrad)" stroke-width="1.5" rx="8" opacity="0.3"/>
+  <!-- زخرفة هندسية -->
+  <line x1="30" y1="60" x2="270" y2="60" stroke="#22c55e" stroke-width="0.5" opacity="0.15"/>
+  <line x1="30" y1="340" x2="270" y2="340" stroke="#22c55e" stroke-width="0.5" opacity="0.15"/>
+  <!-- أيقونة هلال -->
+  <g transform="translate(150,140)" opacity="0.3">
+    <path d="M0,-28 A28,28 0 1,1 0,28 A20,20 0 1,0 0,-28" fill="none" stroke="#22c55e" stroke-width="2.5"/>
+    <circle cx="12" cy="-12" r="3.5" fill="#22c55e"/>
+  </g>
+  <!-- أيقونة الساعة -->
+  <g transform="translate(150,210)" opacity="0.3">
+    <circle cx="0" cy="0" r="16" fill="none" stroke="#22c55e" stroke-width="2"/>
+    <path d="M0,-10v10l7,3" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <!-- نص "قريباً" -->
+  <text x="150" y="260" font-family="Cairo, sans-serif" font-size="36" font-weight="900" fill="url(#greenGrad)" text-anchor="middle" dominant-baseline="middle">قريباً</text>
+  <!-- نص فرعي -->
+  <text x="150" y="295" font-family="Cairo, sans-serif" font-size="13" font-weight="600" fill="#22c55e" text-anchor="middle" dominant-baseline="middle" opacity="0.45">التربية الدينية — قيد الإعداد</text>
+  <!-- فئة -->
+  <rect x="90" y="320" width="120" height="26" rx="13" fill="none" stroke="#22c55e" stroke-width="1" opacity="0.3"/>
+  <text x="150" y="336" font-family="Cairo, sans-serif" font-size="11" font-weight="700" fill="#22c55e" text-anchor="middle" dominant-baseline="middle" opacity="0.5">تربية دينية</text>
+</svg>
