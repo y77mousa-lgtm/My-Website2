@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400" role="img" aria-label="غلاف مذكرة اللغة العربية - الصف الثالث الإعدادي">
+  <defs>
+    <linearGradient id="p3a-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A1628"/>
+      <stop offset="100%" stop-color="#132440"/>
+    </linearGradient>
+    <linearGradient id="p3a-acc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4A843"/>
+      <stop offset="100%" stop-color="#B8922E"/>
+    </linearGradient>
+  </defs>
+  <!-- خلفية -->
+  <rect width="300" height="400" fill="url(#p3a-bg)" rx="12"/>
+  <!-- إطار خارجي -->
+  <rect x="10" y="10" width="280" height="380" fill="none" stroke="url(#p3a-acc)" stroke-width="1.5" rx="8" opacity="0.35"/>
+  <!-- زخرفة هندسية علوية/سفلية -->
+  <line x1="30" y1="60" x2="270" y2="60" stroke="#D4A843" stroke-width="0.5" opacity="0.18"/>
+  <line x1="30" y1="340" x2="270" y2="340" stroke="#D4A843" stroke-width="0.5" opacity="0.18"/>
+  <!-- شارة قريبًا -->
+  <rect x="118" y="84" width="64" height="26" rx="13" fill="url(#p3a-acc)"/>
+  <text x="150" y="97" font-family="Cairo, Segoe UI, sans-serif" font-size="12.5" font-weight="800" fill="#0A1628" text-anchor="middle" dominant-baseline="middle">قريبًا</text>
+  <!-- أيقونة كتاب -->
+  <g transform="translate(150,205)" opacity="0.3">
+    <rect x="-34" y="-38" width="68" height="76" fill="none" stroke="#D4A843" stroke-width="2.5" rx="4"/>
+    <path d="M34,-38 L34,38" stroke="#D4A843" stroke-width="2"/>
+    <line x1="-20" y1="-22" x2="20" y2="-22" stroke="#D4A843" stroke-width="1.5"/>
+    <line x1="-20" y1="-10" x2="15" y2="-10" stroke="#D4A843" stroke-width="1.5"/>
+    <line x1="-20" y1="2" x2="18" y2="2" stroke="#D4A843" stroke-width="1.5"/>
+    <line x1="-20" y1="14" x2="10" y2="14" stroke="#D4A843" stroke-width="1.5"/>
+  </g>
+  <!-- عنوان الصف -->
+  <text x="150" y="140" font-family="Cairo, Segoe UI, sans-serif" font-size="23" font-weight="900" fill="url(#p3a-acc)" text-anchor="middle" dominant-baseline="middle">الصف الثالث الإعدادي</text>
+  <!-- عنوان المادة -->
+  <text x="150" y="300" font-family="Cairo, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#D4A843" text-anchor="middle" dominant-baseline="middle" opacity="0.55">اللغة العربية</text>
+  <!-- عنوان سفلي -->
+  <text x="150" y="318" font-family="Cairo, Segoe UI, sans-serif" font-size="16" font-weight="800" fill="url(#p3a-acc)" text-anchor="middle" dominant-baseline="middle" opacity="0.92">الإصدار الجديد قريبًا</text>
+</svg>

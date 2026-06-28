@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400" role="img" aria-label="غلاف اختبارات الحصص - الصف الثالث الإعدادي">
+  <defs>
+    <linearGradient id="p3e-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A1628"/>
+      <stop offset="100%" stop-color="#1e1040"/>
+    </linearGradient>
+    <linearGradient id="p3e-acc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <!-- خلفية -->
+  <rect width="300" height="400" fill="url(#p3e-bg)" rx="12"/>
+  <!-- إطار خارجي -->
+  <rect x="10" y="10" width="280" height="380" fill="none" stroke="url(#p3e-acc)" stroke-width="1.5" rx="8" opacity="0.35"/>
+  <!-- زخرفة هندسية -->
+  <line x1="30" y1="60" x2="270" y2="60" stroke="#a78bfa" stroke-width="0.5" opacity="0.18"/>
+  <line x1="30" y1="340" x2="270" y2="340" stroke="#a78bfa" stroke-width="0.5" opacity="0.18"/>
+  <!-- شارة قريبًا -->
+  <rect x="118" y="84" width="64" height="26" rx="13" fill="url(#p3e-acc)"/>
+  <text x="150" y="97" font-family="Cairo, Segoe UI, sans-serif" font-size="12.5" font-weight="800" fill="#0A1628" text-anchor="middle" dominant-baseline="middle">قريبًا</text>
+  <!-- أيقونة ورقة اختبار -->
+  <g transform="translate(150,205)" opacity="0.28">
+    <rect x="-28" y="-35" width="56" height="70" fill="none" stroke="#a78bfa" stroke-width="2.5" rx="3"/>
+    <polyline points="8,-35 28,-35 28,-15" fill="none" stroke="#a78bfa" stroke-width="2" stroke-linejoin="round"/>
+    <circle cx="-16" cy="-18" r="2.5" fill="#a78bfa"/>
+    <line x1="-8" y1="-18" x2="18" y2="-18" stroke="#a78bfa" stroke-width="1.5"/>
+    <circle cx="-16" cy="-6" r="2.5" fill="none" stroke="#a78bfa" stroke-width="1.5"/>
+    <line x1="-8" y1="-6" x2="12" y2="-6" stroke="#a78bfa" stroke-width="1.5"/>
+    <circle cx="-16" cy="6" r="2.5" fill="#a78bfa"/>
+    <line x1="-8" y1="6" x2="16" y2="6" stroke="#a78bfa" stroke-width="1.5"/>
+    <circle cx="-16" cy="18" r="2.5" fill="none" stroke="#a78bfa" stroke-width="1.5"/>
+    <line x1="-8" y1="18" x2="10" y2="18" stroke="#a78bfa" stroke-width="1.5"/>
+  </g>
+  <!-- عنوان الصف -->
+  <text x="150" y="140" font-family="Cairo, Segoe UI, sans-serif" font-size="23" font-weight="900" fill="url(#p3e-acc)" text-anchor="middle" dominant-baseline="middle">الصف الثالث الإعدادي</text>
+  <!-- عنوان المادة -->
+  <text x="150" y="300" font-family="Cairo, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#a78bfa" text-anchor="middle" dominant-baseline="middle" opacity="0.55">اختبارات الحصص</text>
+  <!-- عنوان سفلي -->
+  <text x="150" y="318" font-family="Cairo, Segoe UI, sans-serif" font-size="16" font-weight="800" fill="url(#p3e-acc)" text-anchor="middle" dominant-baseline="middle" opacity="0.92">الإصدار الجديد قريبًا</text>
+</svg>
