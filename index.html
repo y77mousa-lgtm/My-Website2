@@ -224,6 +224,8 @@
           <button class="sample-tab" data-category="arabic">اللغة العربية</button>
           <button class="sample-tab" data-category="religion">التربية الدينية</button>
           <button class="sample-tab" data-category="exams">اختبارات الحصص</button>
+          <!-- [تعديل] تبويب جديد "المراجعة النهائية" يعرض بطاقة المراجعة لكل الصفوف. -->
+          <button class="sample-tab" data-category="review">المراجعة النهائية</button>
         </div>
       </div>
 
@@ -621,13 +623,181 @@
           </div>
         </article>
 
-        <!-- ============================================================ -->
-        <!-- ===== الصف الثالث الإعدادي (قريبًا) — 3 بطاقات مؤقتة ===== -->
-        <!-- للتفعيل لاحقًا: استبدل src بالغلاف النهائي + غيّر data-soon + فعّل الرابط -->
-        <!-- ============================================================ -->
+      <!-- ============================================================ -->
+      <!-- ===== المراجعة النهائية — 7 صفوف — جميعًا (قريبًا) ===== -->
+      <!-- تمت إضافة هذا القسم ليظهر داخل كل صف دراسي بنفس تصميم بطاقات المذكرات. -->
+      <!-- كل بطاقة تستخدم نفس كلاسات "قريبًا" الموجودة (coming-soon / cover-tag-soon / btn-soon). -->
+      <!-- لا تحتوي على أي رابط تحميل، والأزرار معطّلة (aria-disabled) وتعرض "قريبًا". -->
+      <!-- ============================================================ -->
 
-        <!-- 1) اللغة العربية — الصف الثالث الإعدادي -->
-        <article class="sample-cover-card coming-soon" data-category="arabic" data-stage="prep" data-grade="prep3" data-soon="سيتم نشر العينة فور صدور المنهج الرسمي الجديد.">
+      <!-- المراجعة النهائية — الصف الثالث الابتدائي -->
+      <article class="sample-cover-card coming-soon" data-category="review" data-stage="primary" data-grade="prim3" data-soon="سيتم نشر المراجعة النهائية قريبًا.">
+        <div class="cover-wrapper">
+          <img src="covers/soon.svg" alt="غلاف المراجعة النهائية - الصف الثالث الابتدائي" class="cover-img" loading="lazy">
+          <span class="cover-tag cover-tag-soon">قريبًا</span>
+          <div class="cover-overlay">
+            <button type="button" class="btn btn-primary btn-sm btn-soon" aria-disabled="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+              تصفّح العينة
+            </button>
+          </div>
+        </div>
+        <div class="cover-info">
+          <span class="cover-category">المراجعة النهائية</span>
+          <h3>المراجعة النهائية</h3>
+          <p>مراجعة شاملة لكل ما سبق — قريبًا.</p>
+          <div class="cover-actions">
+            <button type="button" class="btn btn-outline-gold btn-sm btn-soon" aria-disabled="true">قريبًا</button>
+            <button type="button" class="btn btn-navy btn-sm btn-soon" aria-disabled="true">قريبًا</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- المراجعة النهائية — الصف الرابع الابتدائي -->
+      <article class="sample-cover-card coming-soon" data-category="review" data-stage="primary" data-grade="prim4" data-soon="سيتم نشر المراجعة النهائية قريبًا.">
+        <div class="cover-wrapper">
+          <img src="covers/soon.svg" alt="غلاف المراجعة النهائية - الصف الرابع الابتدائي" class="cover-img" loading="lazy">
+          <span class="cover-tag cover-tag-soon">قريبًا</span>
+          <div class="cover-overlay">
+            <button type="button" class="btn btn-primary btn-sm btn-soon" aria-disabled="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+              تصفّح العينة
+            </button>
+          </div>
+        </div>
+        <div class="cover-info">
+          <span class="cover-category">المراجعة النهائية</span>
+          <h3>المراجعة النهائية</h3>
+          <p>مراجعة شاملة لكل ما سبق — قريبًا.</p>
+          <div class="cover-actions">
+            <button type="button" class="btn btn-outline-gold btn-sm btn-soon" aria-disabled="true">قريبًا</button>
+            <button type="button" class="btn btn-navy btn-sm btn-soon" aria-disabled="true">قريبًا</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- المراجعة النهائية — الصف الخامس الابتدائي -->
+      <article class="sample-cover-card coming-soon" data-category="review" data-stage="primary" data-grade="prim5" data-soon="سيتم نشر المراجعة النهائية قريبًا.">
+        <div class="cover-wrapper">
+          <img src="covers/soon.svg" alt="غلاف المراجعة النهائية - الصف الخامس الابتدائي" class="cover-img" loading="lazy">
+          <span class="cover-tag cover-tag-soon">قريبًا</span>
+          <div class="cover-overlay">
+            <button type="button" class="btn btn-primary btn-sm btn-soon" aria-disabled="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+              تصفّح العينة
+            </button>
+          </div>
+        </div>
+        <div class="cover-info">
+          <span class="cover-category">المراجعة النهائية</span>
+          <h3>المراجعة النهائية</h3>
+          <p>مراجعة شاملة لكل ما سبق — قريبًا.</p>
+          <div class="cover-actions">
+            <button type="button" class="btn btn-outline-gold btn-sm btn-soon" aria-disabled="true">قريبًا</button>
+            <button type="button" class="btn btn-navy btn-sm btn-soon" aria-disabled="true">قريبًا</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- المراجعة النهائية — الصف السادس الابتدائي -->
+      <article class="sample-cover-card coming-soon" data-category="review" data-stage="primary" data-grade="prim6" data-soon="سيتم نشر المراجعة النهائية قريبًا.">
+        <div class="cover-wrapper">
+          <img src="covers/soon.svg" alt="غلاف المراجعة النهائية - الصف السادس الابتدائي" class="cover-img" loading="lazy">
+          <span class="cover-tag cover-tag-soon">قريبًا</span>
+          <div class="cover-overlay">
+            <button type="button" class="btn btn-primary btn-sm btn-soon" aria-disabled="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+              تصفّح العينة
+            </button>
+          </div>
+        </div>
+        <div class="cover-info">
+          <span class="cover-category">المراجعة النهائية</span>
+          <h3>المراجعة النهائية</h3>
+          <p>مراجعة شاملة لكل ما سبق — قريبًا.</p>
+          <div class="cover-actions">
+            <button type="button" class="btn btn-outline-gold btn-sm btn-soon" aria-disabled="true">قريبًا</button>
+            <button type="button" class="btn btn-navy btn-sm btn-soon" aria-disabled="true">قريبًا</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- المراجعة النهائية — الصف الأول الإعدادي -->
+      <article class="sample-cover-card coming-soon" data-category="review" data-stage="prep" data-grade="prep1" data-soon="سيتم نشر المراجعة النهائية قريبًا.">
+        <div class="cover-wrapper">
+          <img src="covers/soon.svg" alt="غلاف المراجعة النهائية - الصف الأول الإعدادي" class="cover-img" loading="lazy">
+          <span class="cover-tag cover-tag-soon">قريبًا</span>
+          <div class="cover-overlay">
+            <button type="button" class="btn btn-primary btn-sm btn-soon" aria-disabled="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+              تصفّح العينة
+            </button>
+          </div>
+        </div>
+        <div class="cover-info">
+          <span class="cover-category">المراجعة النهائية</span>
+          <h3>المراجعة النهائية</h3>
+          <p>مراجعة شاملة لكل ما سبق — قريبًا.</p>
+          <div class="cover-actions">
+            <button type="button" class="btn btn-outline-gold btn-sm btn-soon" aria-disabled="true">قريبًا</button>
+            <button type="button" class="btn btn-navy btn-sm btn-soon" aria-disabled="true">قريبًا</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- المراجعة النهائية — الصف الثاني الإعدادي -->
+      <article class="sample-cover-card coming-soon" data-category="review" data-stage="prep" data-grade="prep2" data-soon="سيتم نشر المراجعة النهائية قريبًا.">
+        <div class="cover-wrapper">
+          <img src="covers/soon.svg" alt="غلاف المراجعة النهائية - الصف الثاني الإعدادي" class="cover-img" loading="lazy">
+          <span class="cover-tag cover-tag-soon">قريبًا</span>
+          <div class="cover-overlay">
+            <button type="button" class="btn btn-primary btn-sm btn-soon" aria-disabled="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+              تصفّح العينة
+            </button>
+          </div>
+        </div>
+        <div class="cover-info">
+          <span class="cover-category">المراجعة النهائية</span>
+          <h3>المراجعة النهائية</h3>
+          <p>مراجعة شاملة لكل ما سبق — قريبًا.</p>
+          <div class="cover-actions">
+            <button type="button" class="btn btn-outline-gold btn-sm btn-soon" aria-disabled="true">قريبًا</button>
+            <button type="button" class="btn btn-navy btn-sm btn-soon" aria-disabled="true">قريبًا</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- المراجعة النهائية — الصف الثالث الإعدادي -->
+      <article class="sample-cover-card coming-soon" data-category="review" data-stage="prep" data-grade="prep3" data-soon="سيتم نشر المراجعة النهائية قريبًا.">
+        <div class="cover-wrapper">
+          <img src="covers/soon.svg" alt="غلاف المراجعة النهائية - الصف الثالث الإعدادي" class="cover-img" loading="lazy">
+          <span class="cover-tag cover-tag-soon">قريبًا</span>
+          <div class="cover-overlay">
+            <button type="button" class="btn btn-primary btn-sm btn-soon" aria-disabled="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+              تصفّح العينة
+            </button>
+          </div>
+        </div>
+        <div class="cover-info">
+          <span class="cover-category">المراجعة النهائية</span>
+          <h3>المراجعة النهائية</h3>
+          <p>مراجعة شاملة لكل ما سبق — قريبًا.</p>
+          <div class="cover-actions">
+            <button type="button" class="btn btn-outline-gold btn-sm btn-soon" aria-disabled="true">قريبًا</button>
+            <button type="button" class="btn btn-navy btn-sm btn-soon" aria-disabled="true">قريبًا</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ============================================================ -->
+      <!-- ===== الصف الثالث الإعدادي (قريبًا) — 3 بطاقات مؤقتة ===== -->
+      <!-- للتفعيل لاحقًا: استبدل src بالغلاف النهائي + غيّر data-soon + فعّل الرابط -->
+      <!-- ============================================================ -->
+
+      <!-- 1) اللغة العربية — الصف الثالث الإعدادي -->
+      <article class="sample-cover-card coming-soon" data-category="arabic" data-stage="prep" data-grade="prep3" data-soon="سيتم نشر العينة فور صدور المنهج الرسمي الجديد.">
           <div class="cover-wrapper">
             <img src="covers/Arabic/prep3.svg" alt="غلاف مذكرة اللغة العربية - الصف الثالث الإعدادي" class="cover-img" loading="lazy">
             <span class="cover-tag cover-tag-soon">قريبًا</span>
@@ -1091,8 +1261,8 @@
       const stages       = document.querySelectorAll('.stage-card');
       const gradeButtons = document.querySelectorAll('.grade-card');
       const subjectTabs  = document.querySelectorAll('#gradeResult .sample-tab');
-      const coverCards   = document.querySelectorAll('.sample-cover-card');
       const resultName   = document.getElementById('gradeResultName');
+      /* [تعديل] المراجعات تُجمع حيًّا داخل applyFilters ليشمل أي بطاقات "المراجعة النهائية" المضافة. */
 
       // خريطة أسماء الصفوف (لعرض عنوان النتيجة)
       const gradeNames = {
@@ -1141,10 +1311,16 @@
 
       /* طبّق الفلترة النهائية على بطاقات المذكرات */
       function applyFilters() {
-        coverCards.forEach(card => {
+        /* [تعديل] قراءة حيّة للبطاقات لتشمل قسم "المراجعة النهائية" المضاف لكل صف. */
+        const cards = document.querySelectorAll('.sample-cover-card');
+        cards.forEach(card => {
           const stageOk   = card.dataset.stage === currentStage;
           const gradeOk   = card.dataset.grade === currentGrade;
-          const subjectOk = currentSubject === 'all' || card.dataset.category === currentSubject;
+          /* [تعديل] قسم "المراجعة النهائية" (data-category="review") يظهر فقط عند تبويب "الكل". */
+          const cat       = card.dataset.category;
+          const subjectOk = currentSubject === 'all'
+            ? true
+            : (cat === currentSubject);
           card.classList.toggle('hidden', !(stageOk && gradeOk && subjectOk));
         });
       }
