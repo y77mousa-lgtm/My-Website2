@@ -610,10 +610,13 @@ body{direction:rtl;overflow-x:hidden}
 }
 .stage-icon-primary{background:var(--navy-50);color:var(--navy)}
 .stage-icon-prep{background:var(--gold-light);color:var(--gold-dark)}
+.stage-icon-sec{background:#dcfce7;color:#15803d}
 .stage-card.open .stage-icon-primary,
 .stage-card:hover .stage-icon-primary{background:var(--navy);color:#fff}
 .stage-card.open .stage-icon-prep,
 .stage-card:hover .stage-icon-prep{background:var(--gold);color:var(--navy)}
+.stage-card.open .stage-icon-sec,
+.stage-card:hover .stage-icon-sec{background:#15803d;color:#fff}
 .stage-meta{display:flex;flex-direction:column;flex-grow:1}
 .stage-name{font-size:1.1rem;font-weight:800;color:var(--gray-900);line-height:1.3}
 .stage-sub{font-size:.8rem;color:var(--gray-500)}
