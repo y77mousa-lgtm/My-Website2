@@ -521,7 +521,6 @@ body{direction:rtl;overflow-x:hidden}
 .sample-cover-card:hover .cover-img{transform:scale(1.04)}
 .cover-overlay{
   position:absolute;inset:0;
-  background:linear-gradient(to top,rgba(10,22,40,.92) 0%,rgba(10,22,40,.5) 35%,rgba(10,22,40,.15) 60%,transparent 80%);
   display:flex;align-items:flex-end;justify-content:center;
   padding:24px 20px;opacity:0;transition:opacity var(--transition);
 }
