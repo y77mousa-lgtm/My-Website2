@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://y77mousa-lgtm.github.io/My-Website2/sitemap.xml
