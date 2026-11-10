@@ -46,6 +46,21 @@
     </div>
   </nav>
 
+  <!-- ===== شريط الترم اللاصق — يظهر بعد تجاوز الهيرو ===== -->
+  <div class="term-bar" id="termBar" hidden role="group" aria-label="التبديل بين الترمات">
+    <div class="container term-bar-inner">
+      <span class="term-bar-lead">تصفّح حسب الترم</span>
+      <button type="button" class="term-chip term-chip-sm is-active" data-term="t1" aria-pressed="true">
+        <span class="term-chip-name">الترم الأول</span>
+        <span class="term-chip-state">جاهز</span>
+      </button>
+      <button type="button" class="term-chip term-chip-sm" data-term="t2" aria-pressed="false">
+        <span class="term-chip-name">الترم الثاني</span>
+        <span class="term-chip-state">قيد الإعداد</span>
+      </button>
+    </div>
+  </div>
+
   <!-- ===== الهيرو ===== -->
   <header class="hero">
     <div class="hero-bg">
@@ -98,9 +113,9 @@
     <div class="container">
       <div class="hero-watermark"><img src="logo/logo.png" alt=""></div>
       <div class="hero-content">
-        <span class="badge">الترم الأول 2027</span>
+        <span class="badge">من الثالث الابتدائي حتى الثاني الثانوي</span>
         <h1>مذكرات لغة عربية<br><span class="highlight">مُصمّمة بالذكاء الاصطناعي</span></h1>
-        <p>مذكرات مخصصة باسمك وبيانات مدرستك — جاهزة للطباعة والبيع بجودة احترافية.</p>
+        <p>مذكرات مخصصة باسمك وبيانات مدرستك — جاهزة للطباعة والبيع، بتحديث كل ترم وتسليم خلال 24 ساعة.</p>
         <div class="hero-actions">
           <a href="#samples" class="btn btn-primary">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
@@ -110,6 +125,19 @@
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             تواصل واتساب
           </a>
+        </div>
+        <!-- ===== رقّتا الترم — مصدر التحكّم الوحيد ===== -->
+        <!-- البوابة كلها في ثابت واحد: T2_PUBLISHED داخل الـ JavaScript. -->
+        <div class="term-pick" hidden role="group" aria-label="اختيار الترم الدراسي">
+          <span class="term-pick-label">اختر الترم</span>
+          <button type="button" class="term-chip is-active" data-term="t1" aria-pressed="true">
+            <span class="term-chip-name">الترم الأول 2027</span>
+            <span class="term-chip-state">جاهز</span>
+          </button>
+          <button type="button" class="term-chip" data-term="t2" aria-pressed="false">
+            <span class="term-chip-name">الترم الثاني 2027</span>
+            <span class="term-chip-state">قيد الإعداد</span>
+          </button>
         </div>
         <div class="hero-capsules">
           <div class="hero-capsule">
@@ -123,6 +151,10 @@
           <div class="hero-capsule">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
             <span>ملفات PDF عالية الجودة</span>
+          </div>
+          <div class="hero-capsule">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
+            <span>تحديث كل ترم</span>
           </div>
         </div>
       </div>
@@ -259,7 +291,7 @@
           <button class="sample-tab" data-category="arabic">اللغة العربية</button>
           <button class="sample-tab" data-category="religion">التربية الدينية</button>
           <button class="sample-tab" data-category="exams">اختبارات الحصص</button>
-          <!-- [تعديل] تبويب جديد "المراجعة النهائية" يعرض بطاقة المراجعة لكل الصفوف. -->
+          <!-- [تعديل] تبويب "المراجعة النهائية" يعرض بطاقة المراجعة للصفوف التي تُقدَّم لها (الابتدائي والإعدادي). -->
           <button class="sample-tab" data-category="review">المراجعة النهائية</button>
         </div>
       </div>
@@ -267,10 +299,17 @@
       <div class="samples-grid fade-up" id="samplesGrid">
 
         <!-- ============================================================ -->
-        <!-- ===== اللغة العربية — 6 صفوف — كاملة ===== -->
+        <!-- نموذج البيانات: كل بطاقة تحمل data-term + data-category + data-stage + data-grade، -->
+        <!-- والمحاور الأربعة تُصفَّى معًا في applyFilters داخل الـ JavaScript. -->
+        <!-- عدم وجود بطاقة = المادة غير مقدَّمة لهذا المرحلة. -->
+        <!-- بطاقة بـ class="coming-soon" = المادة مقدَّمة لكن لم تُنشر بعد. -->
         <!-- ============================================================ -->
 
-        <article class="sample-cover-card" data-category="arabic" data-stage="primary" data-grade="prim3">
+        <!-- ============================================================ -->
+        <!-- ===== اللغة العربية (ترم أول) — 9 صفوف: 8 متاحة + 3ع قريبًا ===== -->
+        <!-- ============================================================ -->
+
+        <article class="sample-cover-card" data-term="t1" data-category="arabic" data-stage="primary" data-grade="prim3">
           <div class="cover-wrapper">
             <img src="covers/Arabic/prim3.png" alt="غلاف مذكرة اللغة العربية - الصف الثالث الابتدائي" class="cover-img" loading="lazy">
             <span class="cover-tag">الأكثر طلباً</span>
@@ -292,7 +331,7 @@
           </div>
         </article>
 
-        <article class="sample-cover-card" data-category="arabic" data-stage="primary" data-grade="prim4">
+        <article class="sample-cover-card" data-term="t1" data-category="arabic" data-stage="primary" data-grade="prim4">
           <div class="cover-wrapper">
             <img src="covers/Arabic/prim4.png" alt="غلاف مذكرة اللغة العربية - الصف الرابع الابتدائي" class="cover-img" loading="lazy">
             <div class="cover-overlay">
@@ -313,7 +352,7 @@
           </div>
         </article>
 
-        <article class="sample-cover-card" data-category="arabic" data-stage="primary" data-grade="prim5">
+        <article class="sample-cover-card" data-term="t1" data-category="arabic" data-stage="primary" data-grade="prim5">
           <div class="cover-wrapper">
             <img src="covers/Arabic/prim5.png" alt="غلاف مذكرة اللغة العربية - الصف الخامس الابتدائي" class="cover-img" loading="lazy">
             <div class="cover-overlay">
@@ -334,7 +373,7 @@
           </div>
         </article>
 
-        <article class="sample-cover-card" data-category="arabic" data-stage="primary" data-grade="prim6">
+        <article class="sample-cover-card" data-term="t1" data-category="arabic" data-stage="primary" data-grade="prim6">
           <div class="cover-wrapper">
             <img src="covers/Arabic/prim6.png" alt="غلاف مذكرة اللغة العربية - الصف السادس الابتدائي" class="cover-img" loading="lazy">
             <div class="cover-overlay">
@@ -355,7 +394,7 @@
           </div>
         </article>
 
-        <article class="sample-cover-card" data-category="arabic" data-stage="prep" data-grade="prep1">
+        <article class="sample-cover-card" data-term="t1" data-category="arabic" data-stage="prep" data-grade="prep1">
           <div class="cover-wrapper">
             <img src="covers/Arabic/prep1.png" alt="غلاف مذكرة اللغة العربية - الصف الأول الإعدادي" class="cover-img" loading="lazy">
             <span class="cover-tag">جديد</span>
@@ -377,7 +416,7 @@
           </div>
         </article>
 
-        <article class="sample-cover-card" data-category="arabic" data-stage="prep" data-grade="prep2">
+        <article class="sample-cover-card" data-term="t1" data-category="arabic" data-stage="prep" data-grade="prep2">
           <div class="cover-wrapper">
             <img src="covers/Arabic/prep2.png" alt="غلاف مذكرة اللغة العربية - الصف الثاني الإعدادي" class="cover-img" loading="lazy">
             <div class="cover-overlay">
@@ -399,10 +438,10 @@
         </article>
 
         <!-- ============================================================ -->
-        <!-- ===== التربية الدينية — 2 متاح + 4 قريباً ===== -->
+        <!-- ===== التربية الدينية (ترم أول) — 7 صفوف: 6 متاحة + 3ع قريبًا — غير مقدَّمة للثانوي ===== -->
         <!-- ============================================================ -->
 
-        <article class="sample-cover-card" data-category="religion" data-stage="primary" data-grade="prim3">
+        <article class="sample-cover-card" data-term="t1" data-category="religion" data-stage="primary" data-grade="prim3">
           <div class="cover-wrapper">
             <img src="covers/Religion/prim3.png" alt="غلاف مذكرة التربية الدينية - الصف الثالث الابتدائي" class="cover-img" loading="lazy">
             <div class="cover-overlay">
@@ -423,7 +462,7 @@
           </div>
         </article>
 
-        <article class="sample-cover-card" data-category="religion" data-stage="primary" data-grade="prim4">
+        <article class="sample-cover-card" data-term="t1" data-category="religion" data-stage="primary" data-grade="prim4">
           <div class="cover-wrapper">
             <img src="covers/Religion/prim4.png" alt="غلاف مذكرة التربية الدينية - الصف الرابع الابتدائي" class="cover-img" loading="lazy">
             <div class="cover-overlay">
@@ -444,7 +483,7 @@
           </div>
         </article>
 
-        <article class="sample-cover-card" data-category="religion" data-stage="primary" data-grade="prim5">
+        <article class="sample-cover-card" data-term="t1" data-category="religion" data-stage="primary" data-grade="prim5">
           <div class="cover-wrapper">
             <img src="covers/Religion/prim5.png" alt="غلاف مذكرة التربية الدينية - الصف الخامس الابتدائي" class="cover-img" loading="lazy">
             <div class="cover-overlay">
@@ -465,7 +504,7 @@
           </div>
         </article>
 
-        <article class="sample-cover-card" data-category="religion" data-stage="primary" data-grade="prim6">
+        <article class="sample-cover-card" data-term="t1" data-category="religion" data-stage="primary" data-grade="prim6">
           <div class="cover-wrapper">
             <img src="covers/Religion/prim6.png" alt="غلاف مذكرة التربية الدينية - الصف السادس الابتدائي" class="cover-img" loading="lazy">
             <div class="cover-overlay">
@@ -486,7 +525,7 @@
           </div>
         </article>
 
-        <article class="sample-cover-card" data-category="religion" data-stage="prep" data-grade="prep1">
+        <article class="sample-cover-card" data-term="t1" data-category="religion" data-stage="prep" data-grade="prep1">
           <div class="cover-wrapper">
             <img src="covers/Religion/prep1.png" alt="غلاف مذكرة التربية الدينية - الصف الأول الإعدادي" class="cover-img" loading="lazy">
             <div class="cover-overlay">
@@ -507,7 +546,7 @@
           </div>
         </article>
 
-        <article class="sample-cover-card" data-category="religion" data-stage="prep" data-grade="prep2">
+        <article class="sample-cover-card" data-term="t1" data-category="religion" data-stage="prep" data-grade="prep2">
           <div class="cover-wrapper">
             <img src="covers/Religion/prep2.png" alt="غلاف مذكرة التربية الدينية - الصف الثاني الإعدادي" class="cover-img" loading="lazy">
             <div class="cover-overlay">
@@ -529,10 +568,10 @@
         </article>
 
         <!-- ============================================================ -->
-        <!-- ===== اختبارات الحصص — 2 متاح + 4 قريباً ===== -->
+        <!-- ===== اختبارات الحصص (ترم أول) — 8 صفوف متاحة — لا تُقدَّم للثاني الثانوي ===== -->
         <!-- ============================================================ -->
 
-        <article class="sample-cover-card" data-category="exams" data-stage="primary" data-grade="prim3">
+        <article class="sample-cover-card" data-term="t1" data-category="exams" data-stage="primary" data-grade="prim3">
           <div class="cover-wrapper">
             <img src="covers/Tests/prim3.png" alt="غلاف اختبارات الحصص - الصف الثالث الابتدائي" class="cover-img" loading="lazy">
             <div class="cover-overlay">
@@ -553,7 +592,7 @@
           </div>
         </article>
 
-        <article class="sample-cover-card" data-category="exams" data-stage="primary" data-grade="prim4">
+        <article class="sample-cover-card" data-term="t1" data-category="exams" data-stage="primary" data-grade="prim4">
           <div class="cover-wrapper">
             <img src="covers/Tests/prim4.png" alt="غلاف اختبارات الحصص - الصف الرابع الابتدائي" class="cover-img" loading="lazy">
             <div class="cover-overlay">
@@ -574,7 +613,7 @@
           </div>
         </article>
 
-        <article class="sample-cover-card" data-category="exams" data-stage="primary" data-grade="prim5">
+        <article class="sample-cover-card" data-term="t1" data-category="exams" data-stage="primary" data-grade="prim5">
           <div class="cover-wrapper">
             <img src="covers/Tests/prim5.png" alt="غلاف اختبارات الحصص - الصف الخامس الابتدائي" class="cover-img" loading="lazy">
             <div class="cover-overlay">
@@ -595,7 +634,7 @@
           </div>
         </article>
 
-        <article class="sample-cover-card" data-category="exams" data-stage="primary" data-grade="prim6">
+        <article class="sample-cover-card" data-term="t1" data-category="exams" data-stage="primary" data-grade="prim6">
           <div class="cover-wrapper">
             <img src="covers/Tests/prim6.png" alt="غلاف اختبارات الحصص - الصف السادس الابتدائي" class="cover-img" loading="lazy">
             <div class="cover-overlay">
@@ -616,7 +655,7 @@
           </div>
         </article>
 
-        <article class="sample-cover-card" data-category="exams" data-stage="prep" data-grade="prep1">
+        <article class="sample-cover-card" data-term="t1" data-category="exams" data-stage="prep" data-grade="prep1">
           <div class="cover-wrapper">
             <img src="covers/Tests/prp1.png" alt="غلاف اختبارات الحصص - الصف الأول الإعدادي" class="cover-img" loading="lazy">
             <div class="cover-overlay">
@@ -637,7 +676,7 @@
           </div>
         </article>
 
-        <article class="sample-cover-card" data-category="exams" data-stage="prep" data-grade="prep2">
+        <article class="sample-cover-card" data-term="t1" data-category="exams" data-stage="prep" data-grade="prep2">
           <div class="cover-wrapper">
             <img src="covers/Tests/prp2.png" alt="غلاف اختبارات الحصص - الصف الثاني الإعدادي" class="cover-img" loading="lazy">
             <div class="cover-overlay">
@@ -658,7 +697,7 @@
           </div>
         </article>
 
-        <article class="sample-cover-card" data-category="exams" data-stage="prep" data-grade="prep3">
+        <article class="sample-cover-card" data-term="t1" data-category="exams" data-stage="prep" data-grade="prep3">
           <div class="cover-wrapper">
             <img src="covers/Tests/prep3.png" alt="غلاف اختبارات الحصص - الصف الثالث الإعدادي" class="cover-img" loading="lazy">
             <div class="cover-overlay">
@@ -680,14 +719,14 @@
         </article>
 
       <!-- ============================================================ -->
-      <!-- ===== المراجعة النهائية — 7 صفوف — جميعًا (قريبًا) ===== -->
-      <!-- تمت إضافة هذا القسم ليظهر داخل كل صف دراسي بنفس تصميم بطاقات المذكرات. -->
-      <!-- كل بطاقة تستخدم نفس كلاسات "قريبًا" الموجودة (coming-soon / cover-tag-soon / btn-soon). -->
-      <!-- لا تحتوي على أي رابط تحميل، والأزرار معطّلة (aria-disabled) وتعرض "قريبًا". -->
+      <!-- ===== المراجعة النهائية (ترم أول) — 7 صفوف: 6 متاحة + 3ع قريبًا ===== -->
+      <!-- تظهر داخل كل صف بنفس تصميم بطاقات المذكرات، ويعرضها تبويبا "الكل" و"المراجعة النهائية". -->
+      <!-- البطاقات المنشورة تحمل رابط Drive كما تفعل بقية البطاقات. -->
+      <!-- البطاقة غير المنشورة (3ع) تستخدم كلاسات "قريبًا": coming-soon / cover-tag-soon / btn-soon. -->
       <!-- ============================================================ -->
 
       <!-- المراجعة النهائية — الصف الثالث الابتدائي -->
-      <article class="sample-cover-card" data-category="review" data-stage="primary" data-grade="prim3">
+      <article class="sample-cover-card" data-term="t1" data-category="review" data-stage="primary" data-grade="prim3">
         <div class="cover-wrapper">
           <img src="covers/Final Review/prim3.png" alt="غلاف المراجعة النهائية - الصف الثالث الابتدائي" class="cover-img" loading="lazy">
           <div class="cover-overlay">
@@ -709,7 +748,7 @@
       </article>
 
       <!-- المراجعة النهائية — الصف الرابع الابتدائي -->
-      <article class="sample-cover-card" data-category="review" data-stage="primary" data-grade="prim4">
+      <article class="sample-cover-card" data-term="t1" data-category="review" data-stage="primary" data-grade="prim4">
         <div class="cover-wrapper">
           <img src="covers/Final Review/prim4.png" alt="غلاف المراجعة النهائية - الصف الرابع الابتدائي" class="cover-img" loading="lazy">
           <div class="cover-overlay">
@@ -731,7 +770,7 @@
       </article>
 
       <!-- المراجعة النهائية — الصف الخامس الابتدائي -->
-      <article class="sample-cover-card" data-category="review" data-stage="primary" data-grade="prim5">
+      <article class="sample-cover-card" data-term="t1" data-category="review" data-stage="primary" data-grade="prim5">
         <div class="cover-wrapper">
           <img src="covers/Final Review/prim5.png" alt="غلاف المراجعة النهائية - الصف الخامس الابتدائي" class="cover-img" loading="lazy">
           <div class="cover-overlay">
@@ -753,7 +792,7 @@
       </article>
 
       <!-- المراجعة النهائية — الصف السادس الابتدائي -->
-      <article class="sample-cover-card" data-category="review" data-stage="primary" data-grade="prim6">
+      <article class="sample-cover-card" data-term="t1" data-category="review" data-stage="primary" data-grade="prim6">
         <div class="cover-wrapper">
           <img src="covers/Final Review/prim6.png" alt="غلاف المراجعة النهائية - الصف السادس الابتدائي" class="cover-img" loading="lazy">
           <div class="cover-overlay">
@@ -775,7 +814,7 @@
       </article>
 
       <!-- المراجعة النهائية — الصف الأول الإعدادي -->
-      <article class="sample-cover-card" data-category="review" data-stage="prep" data-grade="prep1">
+      <article class="sample-cover-card" data-term="t1" data-category="review" data-stage="prep" data-grade="prep1">
         <div class="cover-wrapper">
           <img src="covers/Final Review/prep1.png" alt="غلاف المراجعة النهائية - الصف الأول الإعدادي" class="cover-img" loading="lazy">
           <div class="cover-overlay">
@@ -797,7 +836,7 @@
       </article>
 
       <!-- المراجعة النهائية — الصف الثاني الإعدادي -->
-      <article class="sample-cover-card" data-category="review" data-stage="prep" data-grade="prep2">
+      <article class="sample-cover-card" data-term="t1" data-category="review" data-stage="prep" data-grade="prep2">
         <div class="cover-wrapper">
           <img src="covers/Final Review/prep2.png" alt="غلاف المراجعة النهائية - الصف الثاني الإعدادي" class="cover-img" loading="lazy">
           <div class="cover-overlay">
@@ -819,7 +858,7 @@
       </article>
 
       <!-- المراجعة النهائية — الصف الثالث الإعدادي -->
-      <article class="sample-cover-card coming-soon" data-category="review" data-stage="prep" data-grade="prep3" data-soon="سيتم نشر المراجعة النهائية قريبًا.">
+      <article class="sample-cover-card coming-soon" data-term="t1" data-category="review" data-stage="prep" data-grade="prep3" data-soon="سيتم نشر المراجعة النهائية قريبًا.">
         <div class="cover-wrapper">
           <img src="covers/Final Review/prep3.png" alt="غلاف المراجعة النهائية - الصف الثالث الإعدادي" class="cover-img" loading="lazy">
           <span class="cover-tag cover-tag-soon">قريبًا</span>
@@ -842,12 +881,12 @@
       </article>
 
       <!-- ============================================================ -->
-      <!-- ===== الصف الثالث الإعدادي (قريبًا) — 3 بطاقات مؤقتة ===== -->
+      <!-- ===== الصف الثالث الإعدادي (ترم أول) — 3 بطاقات «قريبًا»: عربي + دين + مراجعة ===== -->
       <!-- للتفعيل لاحقًا: استبدل src بالغلاف النهائي + غيّر data-soon + فعّل الرابط -->
       <!-- ============================================================ -->
 
       <!-- 1) اللغة العربية — الصف الثالث الإعدادي -->
-      <article class="sample-cover-card coming-soon" data-category="arabic" data-stage="prep" data-grade="prep3" data-soon="سيتم نشر العينة فور صدور المنهج الرسمي الجديد.">
+      <article class="sample-cover-card coming-soon" data-term="t1" data-category="arabic" data-stage="prep" data-grade="prep3" data-soon="سيتم نشر العينة فور صدور المنهج الرسمي الجديد.">
           <div class="cover-wrapper">
             <img src="covers/Arabic/prep3.png" alt="غلاف مذكرة اللغة العربية - الصف الثالث الإعدادي" class="cover-img" loading="lazy">
             <span class="cover-tag cover-tag-soon">قريبًا</span>
@@ -870,7 +909,7 @@
         </article>
 
         <!-- 2) التربية الإسلامية — الصف الثالث الإعدادي -->
-        <article class="sample-cover-card coming-soon" data-category="religion" data-stage="prep" data-grade="prep3" data-soon="سيتم نشر العينة فور صدور المنهج الرسمي الجديد.">
+        <article class="sample-cover-card coming-soon" data-term="t1" data-category="religion" data-stage="prep" data-grade="prep3" data-soon="سيتم نشر العينة فور صدور المنهج الرسمي الجديد.">
           <div class="cover-wrapper">
             <img src="covers/Religion/prep3.png" alt="غلاف مذكرة التربية الإسلامية - الصف الثالث الإعدادي" class="cover-img" loading="lazy">
             <span class="cover-tag cover-tag-soon">قريبًا</span>
@@ -893,7 +932,7 @@
         </article>
 
         <!-- 1) اللغة العربية — الصف الأول الثانوي -->
-        <article class="sample-cover-card" data-category="arabic" data-stage="sec" data-grade="sec1">
+        <article class="sample-cover-card" data-term="t1" data-category="arabic" data-stage="sec" data-grade="sec1">
           <div class="cover-wrapper">
             <img src="covers/Arabic/Sec1.png" alt="غلاف مذكرة اللغة العربية - الصف الأول الثانوي" class="cover-img" loading="lazy">
             <div class="cover-overlay">
@@ -915,7 +954,7 @@
         </article>
 
         <!-- 2) اختبارات الحصص — الصف الأول الثانوي -->
-        <article class="sample-cover-card" data-category="exams" data-stage="sec" data-grade="sec1">
+        <article class="sample-cover-card" data-term="t1" data-category="exams" data-stage="sec" data-grade="sec1">
           <div class="cover-wrapper">
             <img src="covers/Tests/Sec1.png" alt="غلاف اختبارات الحصص - الصف الأول الثانوي" class="cover-img" loading="lazy">
             <div class="cover-overlay">
@@ -937,7 +976,7 @@
         </article>
 
         <!-- 3) اللغة العربية — الصف الثاني الثانوي (البكالوريا) -->
-        <article class="sample-cover-card" data-category="arabic" data-stage="sec" data-grade="sec2">
+        <article class="sample-cover-card" data-term="t1" data-category="arabic" data-stage="sec" data-grade="sec2">
           <div class="cover-wrapper">
             <img src="covers/Arabic/Sec2.png" alt="غلاف مذكرة اللغة العربية - الصف الثاني الثانوي - البكالوريا" class="cover-img" loading="lazy">
             <div class="cover-overlay">
@@ -958,11 +997,192 @@
           </div>
         </article>
 
+        <!-- ============================================================ -->
+        <!-- ===== اللغة العربية (ترم ثاني 2027) — 8 صفوف متاحة: 3ب→6ب + 1ع + 2ع + 1ث + 2ث ===== -->
+        <!-- لا تظهر هذه البطاقات إلا بفتح بوابة النشر (T2_PUBLISHED) أو بالمعاينة عبر ?t2preview. -->
+        <!-- روابط العينات هنا تُشير لمجلد الترم الثاني على Drive، لا لمجلد الترم الأول. -->
+        <!-- لإضافة صف: انسخ بطاقة وغيّر data-grade + src + اسم الصف، وضع الغلاف في covers/term2/Arabic/ -->
+        <!-- الثالث الإعدادي لم يُنشأ بعد — والمواد الباقية (دين/اختبارات/مراجعة) تُضاف بنفس نموذج الترم الأول. -->
+        <!-- ============================================================ -->
+
+        <article class="sample-cover-card" data-term="t2" data-category="arabic" data-stage="primary" data-grade="prim3">
+          <div class="cover-wrapper">
+            <img src="covers/term2/Arabic/prim3.jpg" alt="غلاف مذكرة اللغة العربية - الصف الثالث الابتدائي - الترم الثاني 2027" class="cover-img" loading="lazy">
+            <div class="cover-overlay">
+              <a href="https://drive.google.com/drive/folders/1MY1rGBfoxI0o1KoXSxVODYNqlOM89b4I?usp=drive_link" target="_blank" class="btn btn-primary btn-sm">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+                تصفّح العينة
+              </a>
+            </div>
+          </div>
+          <div class="cover-info">
+            <span class="cover-category">اللغة العربية</span>
+            <h3>الصف الثالث الابتدائي</h3>
+            <p>شرح + تدريبات + واجب — ترم ثاني 2027.</p>
+            <div class="cover-actions">
+              <a href="https://drive.google.com/drive/folders/1MY1rGBfoxI0o1KoXSxVODYNqlOM89b4I?usp=drive_link" target="_blank" class="btn btn-outline-gold btn-sm">معاينة</a>
+              <a href="#pricing" class="btn btn-navy btn-sm">اطلب الآن</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="sample-cover-card" data-term="t2" data-category="arabic" data-stage="primary" data-grade="prim4">
+          <div class="cover-wrapper">
+            <img src="covers/term2/Arabic/prim4.jpg" alt="غلاف مذكرة اللغة العربية - الصف الرابع الابتدائي - الترم الثاني 2027" class="cover-img" loading="lazy">
+            <div class="cover-overlay">
+              <a href="https://drive.google.com/drive/folders/1MY1rGBfoxI0o1KoXSxVODYNqlOM89b4I?usp=drive_link" target="_blank" class="btn btn-primary btn-sm">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+                تصفّح العينة
+              </a>
+            </div>
+          </div>
+          <div class="cover-info">
+            <span class="cover-category">اللغة العربية</span>
+            <h3>الصف الرابع الابتدائي</h3>
+            <p>شرح + تدريبات + واجب — ترم ثاني 2027.</p>
+            <div class="cover-actions">
+              <a href="https://drive.google.com/drive/folders/1MY1rGBfoxI0o1KoXSxVODYNqlOM89b4I?usp=drive_link" target="_blank" class="btn btn-outline-gold btn-sm">معاينة</a>
+              <a href="#pricing" class="btn btn-navy btn-sm">اطلب الآن</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="sample-cover-card" data-term="t2" data-category="arabic" data-stage="primary" data-grade="prim5">
+          <div class="cover-wrapper">
+            <img src="covers/term2/Arabic/prim5.jpg" alt="غلاف مذكرة اللغة العربية - الصف الخامس الابتدائي - الترم الثاني 2027" class="cover-img" loading="lazy">
+            <div class="cover-overlay">
+              <a href="https://drive.google.com/drive/folders/1MY1rGBfoxI0o1KoXSxVODYNqlOM89b4I?usp=drive_link" target="_blank" class="btn btn-primary btn-sm">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+                تصفّح العينة
+              </a>
+            </div>
+          </div>
+          <div class="cover-info">
+            <span class="cover-category">اللغة العربية</span>
+            <h3>الصف الخامس الابتدائي</h3>
+            <p>شرح + تدريبات + واجب — ترم ثاني 2027.</p>
+            <div class="cover-actions">
+              <a href="https://drive.google.com/drive/folders/1MY1rGBfoxI0o1KoXSxVODYNqlOM89b4I?usp=drive_link" target="_blank" class="btn btn-outline-gold btn-sm">معاينة</a>
+              <a href="#pricing" class="btn btn-navy btn-sm">اطلب الآن</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="sample-cover-card" data-term="t2" data-category="arabic" data-stage="primary" data-grade="prim6">
+          <div class="cover-wrapper">
+            <img src="covers/term2/Arabic/prim6.jpg" alt="غلاف مذكرة اللغة العربية - الصف السادس الابتدائي - الترم الثاني 2027" class="cover-img" loading="lazy">
+            <div class="cover-overlay">
+              <a href="https://drive.google.com/drive/folders/1MY1rGBfoxI0o1KoXSxVODYNqlOM89b4I?usp=drive_link" target="_blank" class="btn btn-primary btn-sm">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+                تصفّح العينة
+              </a>
+            </div>
+          </div>
+          <div class="cover-info">
+            <span class="cover-category">اللغة العربية</span>
+            <h3>الصف السادس الابتدائي</h3>
+            <p>شرح + تدريبات + واجب — ترم ثاني 2027.</p>
+            <div class="cover-actions">
+              <a href="https://drive.google.com/drive/folders/1MY1rGBfoxI0o1KoXSxVODYNqlOM89b4I?usp=drive_link" target="_blank" class="btn btn-outline-gold btn-sm">معاينة</a>
+              <a href="#pricing" class="btn btn-navy btn-sm">اطلب الآن</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="sample-cover-card" data-term="t2" data-category="arabic" data-stage="prep" data-grade="prep1">
+          <div class="cover-wrapper">
+            <img src="covers/term2/Arabic/prep1.jpg" alt="غلاف مذكرة اللغة العربية - الصف الأول الإعدادي - الترم الثاني 2027" class="cover-img" loading="lazy">
+            <div class="cover-overlay">
+              <a href="https://drive.google.com/drive/folders/1MY1rGBfoxI0o1KoXSxVODYNqlOM89b4I?usp=drive_link" target="_blank" class="btn btn-primary btn-sm">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+                تصفّح العينة
+              </a>
+            </div>
+          </div>
+          <div class="cover-info">
+            <span class="cover-category">اللغة العربية</span>
+            <h3>الصف الأول الإعدادي</h3>
+            <p>شرح + تدريبات + واجب — ترم ثاني 2027.</p>
+            <div class="cover-actions">
+              <a href="https://drive.google.com/drive/folders/1MY1rGBfoxI0o1KoXSxVODYNqlOM89b4I?usp=drive_link" target="_blank" class="btn btn-outline-gold btn-sm">معاينة</a>
+              <a href="#pricing" class="btn btn-navy btn-sm">اطلب الآن</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="sample-cover-card" data-term="t2" data-category="arabic" data-stage="prep" data-grade="prep2">
+          <div class="cover-wrapper">
+            <img src="covers/term2/Arabic/prep2.jpg" alt="غلاف مذكرة اللغة العربية - الصف الثاني الإعدادي - الترم الثاني 2027" class="cover-img" loading="lazy">
+            <div class="cover-overlay">
+              <a href="https://drive.google.com/drive/folders/1MY1rGBfoxI0o1KoXSxVODYNqlOM89b4I?usp=drive_link" target="_blank" class="btn btn-primary btn-sm">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+                تصفّح العينة
+              </a>
+            </div>
+          </div>
+          <div class="cover-info">
+            <span class="cover-category">اللغة العربية</span>
+            <h3>الصف الثاني الإعدادي</h3>
+            <p>شرح + تدريبات + واجب — ترم ثاني 2027.</p>
+            <div class="cover-actions">
+              <a href="https://drive.google.com/drive/folders/1MY1rGBfoxI0o1KoXSxVODYNqlOM89b4I?usp=drive_link" target="_blank" class="btn btn-outline-gold btn-sm">معاينة</a>
+              <a href="#pricing" class="btn btn-navy btn-sm">اطلب الآن</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="sample-cover-card" data-term="t2" data-category="arabic" data-stage="sec" data-grade="sec1">
+          <div class="cover-wrapper">
+            <img src="covers/term2/Arabic/sec1.jpg" alt="غلاف مذكرة اللغة العربية - الصف الأول الثانوي - الترم الثاني 2027" class="cover-img" loading="lazy">
+            <div class="cover-overlay">
+              <a href="https://drive.google.com/drive/folders/1MY1rGBfoxI0o1KoXSxVODYNqlOM89b4I?usp=drive_link" target="_blank" class="btn btn-primary btn-sm">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+                تصفّح العينة
+              </a>
+            </div>
+          </div>
+          <div class="cover-info">
+            <span class="cover-category">اللغة العربية</span>
+            <h3>الصف الأول الثانوي</h3>
+            <p>شرح + تدريبات + واجب — ترم ثاني 2027.</p>
+            <div class="cover-actions">
+              <a href="https://drive.google.com/drive/folders/1MY1rGBfoxI0o1KoXSxVODYNqlOM89b4I?usp=drive_link" target="_blank" class="btn btn-outline-gold btn-sm">معاينة</a>
+              <a href="#pricing" class="btn btn-navy btn-sm">اطلب الآن</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="sample-cover-card" data-term="t2" data-category="arabic" data-stage="sec" data-grade="sec2">
+          <div class="cover-wrapper">
+            <img src="covers/term2/Arabic/sec2.jpg" alt="غلاف مذكرة اللغة العربية - الصف الثاني الثانوي البكالوريا - الترم الثاني 2027" class="cover-img" loading="lazy">
+            <div class="cover-overlay">
+              <a href="https://drive.google.com/drive/folders/1MY1rGBfoxI0o1KoXSxVODYNqlOM89b4I?usp=drive_link" target="_blank" class="btn btn-primary btn-sm">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+                تصفّح العينة
+              </a>
+            </div>
+          </div>
+          <div class="cover-info">
+            <span class="cover-category">اللغة العربية</span>
+            <h3>الصف الثاني الثانوي – البكالوريا</h3>
+            <p>شرح + تدريبات + واجب — ترم ثاني 2027.</p>
+            <div class="cover-actions">
+              <a href="https://drive.google.com/drive/folders/1MY1rGBfoxI0o1KoXSxVODYNqlOM89b4I?usp=drive_link" target="_blank" class="btn btn-outline-gold btn-sm">معاينة</a>
+              <a href="#pricing" class="btn btn-navy btn-sm">اطلب الآن</a>
+            </div>
+          </div>
+        </article>
+
       </div>
 
       <p class="samples-note fade-up">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
         العرض هنا عينة جزئية. للحصول على المذكرة كاملة باسمك، اطلبها عبر واتساب.
+      </p>
+
+      <p class="term-wip-note" id="term2Note" data-wip-term="t2" hidden>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
+        <span>الترم الثاني <strong>قيد الإعداد</strong> — صدرت اللغة العربية من الثالث الابتدائي حتى الثاني الثانوي – البكالوريا، عدا الثالث الإعدادي الذي ينتظر اعتماد المنهج الرسمي الجديد، وبقية المواد تُنشر تباعًا.</span>
       </p>
     </div>
   </section>
@@ -1068,7 +1288,7 @@
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0A1628" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
           </div>
           <h3>لكل المراحل</h3>
-          <p>مذكرات تناسب الابتدائي والإعدادي – والثانوي قريباً.</p>
+          <p>مذكرات من الصف الثالث الابتدائي حتى الثاني الثانوي – البكالوريا.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">
@@ -1340,11 +1560,13 @@
       });
     });
 
-    /* ===== تأثير شريط التنقل عند التمرير ===== */
-    const navbar = document.getElementById('navbar');
+    /* ===== تأثير شريط التنقل + شريط الترم اللاصق عند التمرير ===== */
+    const navbar  = document.getElementById('navbar');
+    const termBar = document.getElementById('termBar');
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 70);
-    });
+      if (termBar) termBar.classList.toggle('is-visible', window.scrollY > window.innerHeight * 0.75);
+    }, { passive: true });
 
     /* ===== ظهور العناصر عند التمرير (Scroll Reveal) ===== */
     const observer = new IntersectionObserver((entries) => {
@@ -1401,11 +1623,31 @@
        كل الدوال قابلة لإعادة الاستخدام ولا تعتمد على معرّفات ثابتة.
     ============================================================ */
     (function () {
+      /* ============================================================
+         بوابة النشر — مفتاح واحد لكل ما يخصّ الترم الثاني
+         T2_PUBLISHED=true:  الرقّتان والشريط ظاهران، وروابط ‎#term=t2‎ تعمل.
+         T2_PUBLISHED=false: تُخفى الواجهة كلها ويُتجاهَل ‎#term=t2‎، مع بقاء
+         ?t2preview بابًا للخلف للمعاينة المحلية.
+         جاهزية كل ترم تُكتب في الـHTML (جاهز / قيد الإعداد) ولا تُشتقّ من البوابة،
+         حتى لا تدّعي واجهةٌ جاهزيةً لم تُنشر بعد.
+         ============================================================ */
+      const T2_PUBLISHED = true;
+      const GATE_OPEN    = T2_PUBLISHED || /[?&]t2preview/.test(location.search);
+
+      function applyPublishGate() {
+        document.querySelectorAll('.term-pick, .term-bar').forEach(el => {
+          el.hidden = !GATE_OPEN;
+        });
+        if (GATE_OPEN) {
+          document.title = 'مذكرات اللغة العربية | مُصمّمة بالذكاء الاصطناعي — الترم الأول والثاني 2027';
+        }
+      }
+      applyPublishGate();
+
       const stages       = document.querySelectorAll('.stage-card');
       const gradeButtons = document.querySelectorAll('.grade-card');
       const subjectTabs  = document.querySelectorAll('#gradeResult .sample-tab');
       const resultName   = document.getElementById('gradeResultName');
-      /* [تعديل] المراجعات تُجمع حيًّا داخل applyFilters ليشمل أي بطاقات "المراجعة النهائية" المضافة. */
 
       // خريطة أسماء الصفوف (لعرض عنوان النتيجة)
       const gradeNames = {
@@ -1421,9 +1663,23 @@
       };
 
       // الحالة الحالية
+      let currentTerm    = 't1';
       let currentStage   = 'primary';
       let currentGrade   = 'prim3';
       let currentSubject = 'all';
+
+      /* كل البطاقات في DOM، ومفاتيح (ترم:مرحلة:صف) التي لها محتوى فعلي */
+      const allCards = Array.from(document.querySelectorAll('.sample-cover-card'));
+      const liveKeys = new Set(allCards.map(c =>
+        `${c.dataset.term}:${c.dataset.stage}:${c.dataset.grade}`
+      ));
+
+      /* النص الأصلي لعدّاد كل مرحلة — محفوظ ليعود كما كان عند رجوع الترم الكامل */
+      const originalCount = new Map();
+      stages.forEach(s => {
+        const c = s.querySelector('.stage-count');
+        if (c) originalCount.set(s, c.textContent);
+      });
 
       /* افتح مرحلة وأغلق الأخرى تلقائياً */
       function setActiveStage(stage) {
@@ -1456,28 +1712,127 @@
 
       /* طبّق الفلترة النهائية على بطاقات المذكرات */
       function applyFilters() {
-        /* [تعديل] قراءة حيّة للبطاقات لتشمل قسم "المراجعة النهائية" المضاف لكل صف. */
-        const cards = document.querySelectorAll('.sample-cover-card');
-        cards.forEach(card => {
+        /* المواد التي لها بطاقة فعلية في هذا السياق (ترم/مرحلة/صف) — ما لا محتوى له لا يُعرض كتّبويب */
+        const present = new Set();
+        allCards.forEach(c => {
+          if (c.dataset.term === currentTerm && c.dataset.stage === currentStage &&
+              c.dataset.grade === currentGrade) present.add(c.dataset.category);
+        });
+        subjectTabs.forEach(tab => {
+          const cat = tab.dataset.category;
+          tab.classList.toggle('is-unavailable', cat !== 'all' && !present.has(cat));
+        });
+        if (currentSubject !== 'all' && !present.has(currentSubject)) resetSubject();
+
+        /* البطاقات من allCards المجموعة مرّة واحدة عند التهيئة — فأي بطاقة تُضاف في HTML تدخل الفلترة تلقائيًا. */
+        allCards.forEach(card => {
+          const termOk    = card.dataset.term === currentTerm;
           const stageOk   = card.dataset.stage === currentStage;
           const gradeOk   = card.dataset.grade === currentGrade;
-          /* [تعديل] قسم "المراجعة النهائية" (data-category="review") يظهر فقط عند تبويب "الكل". */
+          /* بطاقات "المراجعة النهائية" (data-category="review") تظهر عند تبويب "الكل" وتبويب "المراجعة النهائية". */
           const cat       = card.dataset.category;
           const subjectOk = currentSubject === 'all'
             ? true
             : (cat === currentSubject);
-          card.classList.toggle('hidden', !(stageOk && gradeOk && subjectOk));
+          card.classList.toggle('hidden', !(termOk && stageOk && gradeOk && subjectOk));
         });
       }
 
-      /* ربط أزرار المراحل: فتح/إغلاق + اختيار أول صف تلقائياً */
+      /* ===== الترمات: أول مرحلة/صف لهما محتوى فعلي ===== */
+      function firstGradeOf(stageKey) {
+        const stage = Array.from(stages).find(s => s.dataset.stage === stageKey);
+        if (!stage) return null;
+        const btn = Array.from(stage.querySelectorAll('.grade-card'))
+          .find(b => liveKeys.has(`${currentTerm}:${stageKey}:${b.dataset.grade}`));
+        return btn ? btn.dataset.grade : null;
+      }
+
+      function firstAvailableSlot() {
+        for (const stage of stages) {
+          const grade = firstGradeOf(stage.dataset.stage);
+          if (grade) return { stage: stage.dataset.stage, grade };
+        }
+        return null;
+      }
+
+      /* عدد الصفوف المتاحة للترم الحالي داخل مرحلة */
+      function availableGrades(stageKey) {
+        return Array.from(document.querySelectorAll(`.grade-card`))
+          .filter(b => b.closest('.stage-card').dataset.stage === stageKey &&
+                       liveKeys.has(`${currentTerm}:${stageKey}:${b.dataset.grade}`));
+      }
+
+      function arabicCount(n) {
+        if (n === 1) return 'صف واحد';
+        if (n === 2) return 'صفّان';
+        if (n <= 6)  return n + ' صفوف';
+        return n + ' صف';
+      }
+
+      /* أخفِ المراحل والصفوف التي لا محتوى لها في الترم الحالي، وحدّث العدّادات */
+      function refreshAvailability() {
+        stages.forEach(stage => {
+          const key   = stage.dataset.stage;
+          const free  = availableGrades(key);
+          const total = stage.querySelectorAll('.grade-card').length;
+          stage.classList.toggle('is-unavailable', free.length === 0);
+          const count = stage.querySelector('.stage-count');
+          /* لا تكتب عدّادًا جديدًا ما دام النص الأصلي دقيقًا لكل الترمات */
+          if (count && free.length && free.length !== total) count.textContent = arabicCount(free.length);
+          else if (count && originalCount.has(stage)) count.textContent = originalCount.get(stage);
+          stage.querySelectorAll('.grade-card').forEach(btn =>
+            btn.classList.toggle('is-unavailable', !free.includes(btn))
+          );
+        });
+      }
+
+      function syncChips() {
+        document.querySelectorAll('.term-chip').forEach(chip => {
+          const on = chip.dataset.term === currentTerm;
+          chip.classList.toggle('is-active', on);
+          chip.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+      }
+
+      function syncNotes() {
+        document.querySelectorAll('.term-wip-note').forEach(note => {
+          note.hidden = note.dataset.wipTerm !== currentTerm;
+        });
+      }
+
+      /* بدّل الترم: أعد نقطة البداية وطبّق الفلترة ومرّر الزائر للعينات */
+      function setTerm(term, scroll) {
+        currentTerm = term;
+        refreshAvailability();
+        const next = firstAvailableSlot();
+        if (next) {
+          setActiveStage(next.stage);
+          resetSubject();
+          setActiveGrade(next.grade);
+        }
+        applyFilters();
+        syncChips();
+        syncNotes();
+        if (history.replaceState) history.replaceState(null, '', '#term=' + term);
+        if (scroll) document.getElementById('samples').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      /* ربط رقّتي الترم (الهيرو + الشريط اللاصق) */
+      document.querySelectorAll('.term-chip').forEach(chip => {
+        chip.addEventListener('click', () => {
+          if (chip.dataset.term !== currentTerm) setTerm(chip.dataset.term, true);
+        });
+      });
+
+      /* ربط أزرار المراحل: فتح/إغلاق + اختيار أول صف متاح تلقائياً */
       stages.forEach(stage => {
         const head = stage.querySelector('.stage-head');
         head.addEventListener('click', () => {
           const stageKey = stage.dataset.stage;
           setActiveStage(stageKey);
           resetSubject();
-          setActiveGrade(stage.querySelector('.grade-card').dataset.grade);
+          const grade = firstGradeOf(stageKey);
+          if (grade) setActiveGrade(grade);
           applyFilters();
         });
       });
@@ -1501,11 +1856,19 @@
         });
       });
 
-      /* التهيئة الأولى */
-      setActiveStage('primary');
-      setActiveGrade('prim3');
+      /* التهيئة الأولى — الترم من رابط الصفحة، ولا يُفتح إلا بعد بوابة النشر */
+      const urlTerm  = (location.hash.match(/[#&]term=(t\d+)/) || [])[1];
+      const hasCards = [...liveKeys].some(k => k.split(':')[0] === urlTerm);
+      currentTerm = (GATE_OPEN && hasCards) ? urlTerm : 't1';
+
+      refreshAvailability();
+      const entry = firstAvailableSlot() || { stage: 'primary', grade: 'prim3' };
+      setActiveStage(entry.stage);
+      setActiveGrade(entry.grade);
       resetSubject();
       applyFilters();
+      syncChips();
+      syncNotes();
     })();
   </script>
 

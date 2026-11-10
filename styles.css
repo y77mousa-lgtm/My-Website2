@@ -66,6 +66,9 @@ body{direction:rtl;overflow-x:hidden}
 .fade-up{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
 .fade-up.visible{opacity:1;transform:translateY(0)}
 
+/* قاعدة عامة: أي كلاس يحدد display يتجاوز [hidden] — فلا يُفتح عنصر مخفى بخطأ */
+[hidden]{display:none!important}
+
 /* ===== شريط التنقل ===== */
 .navbar{
   position:fixed;top:0;left:0;right:0;z-index:1000;
@@ -225,15 +228,17 @@ body{direction:rtl;overflow-x:hidden}
 .hero-content h1,
 .hero-content > p,
 .hero-content .hero-actions,
+.hero-content .term-pick,
 .hero-content .hero-capsules{
   opacity:0;transform:translateY(22px);
   animation:fadeUp .7s cubic-bezier(.2,.7,.3,1) forwards;
 }
-/* ترتيب الظهور: badge ← title ← text ← buttons ← capsules */
+/* ترتيب الظهور: badge ← title ← text ← buttons ← term chips ← capsules */
 .hero-content .badge{animation-delay:.15s}
 .hero-content h1{animation-delay:.35s}
 .hero-content > p{animation-delay:.55s}
 .hero-content .hero-actions{animation-delay:.72s}
+.hero-content .term-pick{animation-delay:.82s}
 .hero-content .hero-capsules{animation-delay:.92s}
 
 /* ===== البادج ===== */
@@ -352,6 +357,72 @@ body{direction:rtl;overflow-x:hidden}
 
 /* ===== شريط القديم — تجنب التعارض ===== */
 .hero-strip{display:none}
+
+/* ===== رقّتا الترم في الهيرو ===== */
+.term-pick{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:32px}
+.term-pick-label{font-size:.78rem;font-weight:700;color:rgba(255,255,255,.45);letter-spacing:.04em;margin-inline-end:2px}
+.term-chip{
+  display:inline-flex;align-items:center;gap:9px;
+  background:rgba(255,255,255,.06);
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+  border:1px solid rgba(255,255,255,.12);
+  padding:9px 16px;border-radius:8px;
+  font-family:inherit;font-size:.86rem;font-weight:700;
+  color:rgba(255,255,255,.8);cursor:pointer;
+  transition:background var(--transition),border-color var(--transition),color var(--transition),transform var(--transition),box-shadow var(--transition);
+}
+.term-chip:hover{background:rgba(255,255,255,.1);border-color:rgba(212,168,67,.35);color:#fff;transform:translateY(-1px)}
+.term-chip:active{transform:translateY(0)}
+.term-chip:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.term-chip.is-active{background:var(--gold);border-color:var(--gold);color:var(--navy);box-shadow:var(--glow-gold)}
+.term-chip-state{
+  font-size:.7rem;font-weight:800;padding:2px 9px;border-radius:999px;
+  background:rgba(255,255,255,.1);color:inherit;white-space:nowrap;
+}
+.term-chip.is-active .term-chip-state{background:rgba(10,22,40,.16)}
+
+/* ===== شريط الترم اللاصق — يظهر بعد الهيرو ===== */
+.term-bar{
+  position:fixed;top:70px;left:0;right:0;z-index:999;
+  opacity:0;transform:translateY(-14px);pointer-events:none;
+  transition:opacity var(--transition),transform var(--transition);
+}
+.term-bar.is-visible{opacity:1;transform:none;pointer-events:auto}
+.term-bar-inner{
+  display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px;
+  width:fit-content;margin:0 auto;padding:8px 10px;
+  background:rgba(255,255,255,.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border:1px solid var(--gray-200);border-radius:14px;
+  box-shadow:var(--shadow-md),0 0 30px rgba(212,168,67,.06);
+}
+.term-bar .term-chip{background:var(--navy-50);border-color:var(--navy-100);color:var(--gray-700)}
+.term-bar .term-chip:hover{background:var(--navy-100);border-color:var(--gold);color:var(--navy)}
+.term-bar .term-chip.is-active{background:var(--gold);border-color:var(--gold-dark);color:var(--navy);box-shadow:none}
+.term-bar .term-chip-state{background:rgba(10,22,40,.06)}
+.term-bar .term-chip.is-active .term-chip-state{background:rgba(10,22,40,.12)}
+.term-bar-lead{font-size:.76rem;font-weight:700;color:var(--gray-500);letter-spacing:.02em}
+.term-chip-sm{padding:7px 13px;font-size:.8rem}
+
+/* ===== مرحلة/صف بلا محتوى في الترم الحالي ===== */
+.stage-card.is-unavailable,.grade-card.is-unavailable,.sample-tab.is-unavailable{display:none}
+
+/* ===== ملاحظة «قيد الإعداد» أسفل شبكة العينات ===== */
+.term-wip-note{
+  display:flex;align-items:flex-start;gap:10px;
+  max-width:640px;margin:22px auto 0;padding:14px 18px;
+  background:var(--gold-50);border:1px solid var(--gold-light);border-radius:12px;
+  font-size:.9rem;line-height:1.8;color:var(--gray-700);
+}
+.term-wip-note svg{color:var(--gold-dark);flex-shrink:0;margin-top:4px}
+.term-wip-note strong{color:var(--gold-dark)}
+
+@media(max-width:640px){
+  .term-bar{top:62px}
+  .term-bar-lead{display:none}
+  .term-pick{gap:8px;margin-bottom:26px}
+  .term-chip{padding:8px 13px;font-size:.8rem}
+  .term-chip-sm{padding:6px 11px;font-size:.76rem}
+}
 
 /* ===== احترام تفضيل تقليل الحركة ===== */
 @media(prefers-reduced-motion:reduce){
